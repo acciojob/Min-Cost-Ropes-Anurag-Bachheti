@@ -8,7 +8,7 @@ if(arr.length < 2) return 0;
 		let first = newArr.shift();
 		let second = newArr.shift();
 		let sum = first + second;
-		cost += sum;
+		count += sum;
 
 		let index = newArr.findIndex(el => el > sum);
 		if(index === -1){
@@ -17,7 +17,7 @@ if(arr.length < 2) return 0;
 			newArr.splice(index, 0, sum);
 		}
 	}
-	return cost;
+	return count;
 }
 
 module.exports=mincost;
